@@ -1,0 +1,104 @@
+/* ===================================================================
+   4. FLEXBOX RESPONSIVT
+
+   Flexbox fördelar innehåll i EN riktning. Det responsiva greppet
+   är därför nästan alltid detsamma: byt riktning på huvudaxeln.
+
+   Staplat på mobil   ->  flex-direction: column
+   På rad på desktop  ->  flex-direction: row
+   UPPGIFT
+   Basen är staplad. Skriv media queryn som lägger fälten på rad:
+   Datum och Tid ska dela lika på bredden, Gäster ska vara smal
+   och fast, och knappen ska hamna till höger.
+
+   =================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #241c15;
+    padding: 1.6rem;
+    background-color: #faf6f1;
+}
+
+.bokning {
+    background-color: #ffffff;
+    border: 1px solid #6b5c4e;
+    padding: 2rem 1.6rem;
+    max-width: 96rem;
+    margin: 0 auto;
+}
+
+.bokning h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+}
+
+/* --- BASEN: staplat --- */
+
+.rad {
+    display: flex;
+    /* Huvudaxeln går nedåt. justify-content styr alltså
+       lodrätt här, inte vågrätt. */
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.falt {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+label {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+input {
+    font-family: inherit;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    min-height: 4.4rem;
+    border: 1px solid #6b5c4e;
+}
+
+.knapp {
+    display: block;
+    width: 100%;
+    margin-top: 1.6rem;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding: 1.4rem;
+    min-height: 4.4rem;
+    background-color: #8a3a1c;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+}
+
+/* --- På rad när det finns plats --- */
+
+/* ===================================================================
+   TRE FLEX-VÄRDEN ATT KUNNA
+
+   flex: 1 1 0      dela lika på utrymmet, oavsett innehåll
+   flex: 1 1 auto   dela på det som blir över, utgå från innehållet
+   flex: 0 0 10rem  rör dig inte, var exakt så här bred
+
+   flex-wrap: wrap  låt items radbryta i stället för att krympa
+                    — ofta ett alternativ till en media query
+   =================================================================== */

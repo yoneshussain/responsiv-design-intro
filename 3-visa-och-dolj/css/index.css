@@ -1,0 +1,88 @@
+/* ===================================================================
+   3. VISA OCH DÖLJ MED DISPLAY: NONE
+
+   Hamburgare på mobil, utskriven meny på desktop. Båda finns i
+   HTML:en, display styr vilken som syns.
+
+   VIKTIGT OM TILLGÄNGLIGHET
+   display: none tar bort elementet för ALLA, även skärmläsare.
+   Det är precis vad vi vill här — annars hade menyn lästs upp
+   två gånger, en gång per variant.
+
+   Men därför får display: none ALDRIG användas för något som
+   fortfarande ska gå att nå. Till det finns .dold längst ner.
+   UPPGIFT
+   Basen är mobil: hamburgaren syns, menyn är dold. Skriv media
+   queryn som byter plats på dem när det finns plats.
+
+   Testa sedan: tabba genom sidan i båda bredderna. Hamnar fokus
+   på något du inte ser har du gömt fel.
+
+   =================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #241c15;
+    background-color: #faf6f1;
+}
+
+main {
+    padding: 2.4rem 1.6rem;
+}
+
+.topp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    background-color: #2b2118;
+    color: #ffffff;
+    padding: 1.2rem 1.6rem;
+}
+
+.ordmark {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.hamburgare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* minst 24x24, helst 44 */
+    width: 4.4rem;
+    height: 4.4rem;
+    background: none;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hamburgare svg {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+/* BASEN är mobil: menyn dold, hamburgaren syns */
+.meny {
+    display: none;
+}
+
+.meny a {
+    color: #ffffff;
+}
+
+/* Byt plats på dem när det finns plats */
+

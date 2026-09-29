@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Visa och dölj</title>
+</head>
+<body>
+    <header class="topp">
+        <span class="ordmark">Kvarterskrogen</span>
+
+        <!-- Syns bara på smal skärm -->
+        <button type="button" class="hamburgare">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            <span class="dold">Meny</span>
+        </button>
+
+        <!-- Syns bara på bred skärm -->
+        <nav class="meny" aria-label="Huvudmeny">
+            <a href="#">Matsedel</a>
+            <a href="#">Boka bord</a>
+            <a href="#">Hitta hit</a>
+        </nav>
+    </header>
+
+    <main>
+        <p>Dra i fönstret och titta på toppen.</p>
+    </main>
+</body>
+</html>

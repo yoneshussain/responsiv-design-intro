@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Boka bord</title>
+</head>
+<body>
+    <form class="bokning">
+        <h2>Boka bord</h2>
+
+        <div class="rad">
+            <div class="falt">
+                <label for="datum">Datum</label>
+                <input type="date" id="datum">
+            </div>
+            <div class="falt">
+                <label for="tid">Tid</label>
+                <input type="time" id="tid">
+            </div>
+            <div class="falt falt-smal">
+                <label for="gaster">Gäster</label>
+                <input type="number" id="gaster" min="1" max="12" value="2">
+            </div>
+        </div>
+
+        <button type="submit" class="knapp">Sök lediga bord</button>
+    </form>
+</body>
+</html>
