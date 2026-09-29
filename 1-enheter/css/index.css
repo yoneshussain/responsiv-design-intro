@@ -17,11 +17,17 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+    /* font size per default är 100% = 16px  */
+    /* 62.5% av användarens grundstorlek ger 1 rem = 10px */
+}
+
 body {
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.6;
-    padding: 24px;
+    padding: 2.4rem;
     color: #241c15;
     background-color: #faf6f1;
 }
@@ -30,10 +36,10 @@ body {
     /* % för bredd: anpassar sig efter föräldern.
        max-width är låst i px — den växer inte med texten. */
     width: 100%;
-    max-width: 380px;
+    max-width: 38rem;
 
     background-color: #ffffff;
-    padding: 24px;
+    padding: 2.4rem;
     /* px på hårlinjen. En ram ska vara en pixel tunn även
        när texten är dubbelt så stor. */
     border: 1px solid #6b5c4e;
@@ -41,34 +47,34 @@ body {
 
 .etikett {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: #8a3a1c;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
 }
 
 .kort h2 {
-    font-size: 24px;
-    margin-bottom: 4px;
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
 }
 
 .pris {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 1.2rem;
 }
 
 .kort button {
-    margin-top: 20px;
+    margin-top: 2rem;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 17px;
+    font-size: 1.7rem;
     font-weight: 700;
-    padding: 14px 24px;
+    padding: 1.4rem 2.4rem;
     /* Träffytan växer nu med texten. Med px hade knappen blivit
        trång när texten blev stor. */
-    min-height: 44px;
+    min-height: 4.4rem;
 
     background-color: #8a3a1c;
     color: #ffffff;
